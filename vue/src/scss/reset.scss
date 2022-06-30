@@ -1,0 +1,91 @@
+@import 'colors';
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+  list-style-type: none;
+  -webkit-padding-start: 0;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  tr {
+    .td,
+    .th {
+      padding: 0;
+    }
+  }
+}
+
+a {
+  &:link,
+  &:active,
+  &:visited,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  > img {
+    border: 0;
+  }
+}
+
+input {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}

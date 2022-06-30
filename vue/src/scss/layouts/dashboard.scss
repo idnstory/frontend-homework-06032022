@@ -1,0 +1,55 @@
+@import '../colors';
+
+.dashboard-wrap {
+  overflow-y: hidden;
+
+  .dashboard {
+    position: relative;
+    height: calc(100vh - 58px);
+    padding-left: 300px;
+    overflow-y: auto;
+  }
+
+  div[class^='area'] {
+    position: relative;
+    height: auto;
+    min-height: calc(100vh - 58px);
+    padding: 16px;
+    color: $black-4;
+
+    .page-top {
+      height: auto;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: $border-gray-4;
+      text-align: right;
+
+      .pathname {
+        position: absolute;
+      }
+
+      .button-wrap {
+        display: inline-block;
+
+        button {
+          width: 80px;
+          height: 34px;
+          margin-right: 8px;
+          border: 0;
+          background-color: $gray-4;
+          color: $gray;
+          font-size: 12px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &:hover {
+            background-color: $gray-3;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '../colors';
+
+#gnb {
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  width: 300px;
+  height: calc(100% - 58px);
+  overflow-y: auto;
+  border-right: $border-gray-2;
+
+  .gnb-title {
+    margin: 8px 0 0 8px;
+  }
+
+  > .gnb-inner {
+    padding: 32px;
+  }
+
+  .gnb-inner {
+    height: auto;
+
+    .gnb-item {
+      &[depth='1'] {
+        padding-left: 8px;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+          padding-bottom: 16px;
+          border-bottom: $border-gray-4;
+        }
+      }
+
+      &[depth='2'] {
+        padding-left: 16px;
+      }
+
+      &[depth='3'] {
+        padding-left: 24px;
+      }
+
+      .link::before {
+        content: '\00B7';
+        position: relative;
+        top: 3px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+}

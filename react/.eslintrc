@@ -1,0 +1,147 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true
+  },
+  "globals": {},
+  "rules": {
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "react/jsx-indent": [
+      2,
+      2
+    ],
+    "react/jsx-indent-props": [
+      2,
+      2
+    ],
+    "react/jsx-filename-extension": [
+      0
+    ],
+    "react/forbid-prop-types": [
+      0
+    ],
+    "react/self-closing-comp": [
+      0
+    ],
+    "react/no-did-update-set-state": [
+      0
+    ],
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "arrow-body-style": [
+      2,
+      "always"
+    ],
+    "prefer-template": [
+      0
+    ],
+    "prefer-arrow-callback": [
+      1
+    ],
+    "no-else-return": [
+      1
+    ],
+    "no-unused-vars": [
+      1
+    ],
+    "no-unused-expressions": [
+      "error",
+      {"allowTernary": true}
+    ],
+    "vars-on-top": [
+      1
+    ],
+    "react/sort-comp": [
+      0
+    ],
+    "max-len": [
+      "error",
+      250
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "no-alert": [
+      1
+    ],
+    "no-mixed-operators": [
+      0
+    ],
+    "no-plusplus": [
+      0
+    ],
+    "jsx-a11y/no-static-element-interactions": [
+      0
+    ],
+    "jsx-a11y/no-noninteractive-element-interactions": [
+      0
+    ],
+    "jsx-a11y/click-events-have-key-events": [
+      0
+    ],
+    "react/jsx-curly-spacing": [
+      "warn",
+      {
+        "when": "always",
+        "allowMultiline": true,
+        "spacing": {
+          "objectLiterals": "never"
+        }
+      }
+    ],
+    "import/extensions": [
+      0
+    ],
+    "import/no-unresolved": [
+      0
+    ],
+    "class-methods-use-this": [
+      0
+    ],
+    "prefer-destructuring": ["error", {
+      "VariableDeclarator": {
+        "array": false,
+        "object": true
+      },
+      "AssignmentExpression": {
+        "array": false,
+        "object": true
+      }
+    }, {
+      "enforceForRenamedProperties": false
+    }],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }],
+    "jsx-a11y/label-has-for": [
+      0
+    ],
+    "no-param-reassign": [
+      "error", {
+        "props": false
+      }
+    ],
+    "no-restricted-properties": [
+      0
+    ],
+    "react/button-has-type": [
+      0
+    ],
+    "react/destructuring-assignment": [
+      0
+    ]
+  }
+}
