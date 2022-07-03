@@ -32,5 +32,86 @@
         margin: auto;
       }
     }
+
+    .box-two {
+      position: relative;
+      width: 50%;
+      height: 128px;
+      margin-bottom: 8px;
+      padding: 4px;
+      border: $border-gray-4;
+      font-size: 16px;
+      float: left;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 64px;
+        height: 32px;
+        margin: auto;
+      }
+    }
+
+    .box-three {
+      position: relative;
+      width: 33.3%;
+      height: 128px;
+      margin-bottom: 8px;
+      padding: 4px;
+      border: $border-gray-4;
+      font-size: 16px;
+      float: left;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 64px;
+        height: 32px;
+        margin: auto;
+      }
+    }
+
+    .box-four {
+      position: relative;
+      width: 25%;
+      height: 128px;
+      margin-bottom: 8px;
+      padding: 4px;
+      border: $border-gray-4;
+      font-size: 16px;
+      float: left;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 64px;
+        height: 32px;
+        margin: auto;
+      }
+    }
   }
 }
