@@ -5,13 +5,23 @@ const INITIAL_STATE = {
         name: 'box - ' + (idx + 1)
       };
     }),
-    numOfColumns: 0
+    numOfColumns: 1
   }
 };
 
 export default function uiReducer(state = INITIAL_STATE, action) {
-  const { type } = { ...action };
+  const { type, payload } = { ...action };
+
   switch (type) {
+    case "selectNum":
+      return {
+        ...state,
+        box: {
+          items: state.box.items,
+          numOfColumns: payload
+        }
+      }
+
     default:
       return state;
   }

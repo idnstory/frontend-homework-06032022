@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import 'scss/pages/work.scss';
+import { selectNum } from '../reducer/ui/uiAction';
 
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable no-useless-constructor */
 /* eslint-disable react/no-array-index-key */
+
 class Work extends React.Component {
   constructor(props) {
     super(props);
@@ -20,9 +22,10 @@ class Work extends React.Component {
         <div className="page-top">
           <h3 className="pathname">{ pathname }</h3>
           <div className="button-wrap">
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
+            <button onClick={() => this.props.selectNum(1)}>1</button>
+            <button onClick={() => this.props.selectNum(2)}>2</button>
+            <button onClick={() => this.props.selectNum(3)}>3</button>
+            <button onClick={() => this.props.selectNum(4)}>4</button>
           </div>
         </div>
         <div
@@ -32,14 +35,39 @@ class Work extends React.Component {
             this.props.box.items
               ? this.props.box.items.map((item, idx) => {
                 return (
+                  this.props.box.numOfColumns === 1 ? 
+                    <div
+                      className={
+                        classnames('box', {})
+                      }
+                      key={'box-item-' + idx}
+                    >
+                  <p>{item.name }</p>
+                </div> : this.props.box.numOfColumns === 2 ?
                   <div
                     className={
-                      classnames('box', {})
+                      classnames('box-two', {})
                     }
-                    key={ 'box-item-' + idx }
+                    key={'box-item-' + idx}
                   >
-                    <p>{ item.name }</p>
-                  </div>
+                    <p>{item.name }</p>
+                  </div> : this.props.box.numOfColumns === 3 ?
+                  <div
+                    className={
+                      classnames('box-three', {})
+                    }
+                    key={'box-item-' + idx}
+                  >
+                    <p>{item.name }</p>
+                  </div> : this.props.box.numOfColumns === 4 ?
+                  <div
+                    className={
+                      classnames('box-four', {})
+                    }
+                    key={'box-item-' + idx}
+                  >
+                    <p>{item.name }</p>
+                  </div> : null
                 );
               })
               : ''
@@ -65,4 +93,6 @@ export default connect((state) => {
   return {
     box: state.ui.box
   };
+}, {
+  selectNum
 })(Work);

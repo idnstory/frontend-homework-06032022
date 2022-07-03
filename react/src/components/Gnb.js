@@ -1,8 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'scss/components/gnb.scss';
+import GnbItem from './GnbItem';
 
 const Gnb = () => {
+  const [gnbs, setGnbs] = React.useState([]);
+
+  const getGnbs = async () => {
+    const res = await window.API.getGnb();
+    setGnbs(res.data);      
+  }
+
+  React.useEffect(() => {
+    getGnbs();
+  }, []);
+
   return (
     <div id="gnb">
       <h3 className="gnb-title">Sample</h3>
@@ -46,7 +58,7 @@ const Gnb = () => {
       </div>
       <h3 className="gnb-title">API menu</h3>
       <div className="gnb-inner">
-        { /*  your code goes from here */ }
+        {GnbItem(gnbs)}
       </div>
     </div>
   );

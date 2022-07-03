@@ -1,0 +1,1 @@
+export const selectNum = (num) => ({type: "selectNum", payload: num});
